@@ -1,17 +1,45 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // Fix for "Cannot set property fetch of #<Window>" error
+      // This happens when certain libraries (like formdata-polyfill) try to polyfill 
+      // fetch by assigning to global.fetch. In this environment, window.fetch 
+      // is a read-only getter.
+      (function() {
+        // Create a global object that inherits from window
+        // This allows libraries to assign to global.fetch without hitting the read-only window.fetch
+        if (typeof window.global === 'undefined') {
+          window.global = Object.create(window);
+        }
+        
+        if (typeof window.process === 'undefined') {
+          window.process = { env: {} };
+        }
+
+        if (typeof window.Buffer === 'undefined') {
+          window.Buffer = { isBuffer: () => false };
+        }
+        
+        // Also try to provide a no-op setter on window itself just in case
+        try {
+          const originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get() { return originalFetch; },
+            set(v) { 
+              console.warn('vork.global: Prevented attempt to overwrite window.fetch');
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Non-configurable, nothing we can do on window.fetch directly
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vork.global</title>
-    <script>
-      // Fix for "Cannot set property fetch of #<Window>" error
-      // This happens when certain libraries try to polyfill fetch in an environment
-      // where window.fetch is a read-only getter.
-      if (typeof window.global === 'undefined') {
-        window.global = window;
-      }
-    </script>
   </head>
   <body>
     <div id="root"></div>
