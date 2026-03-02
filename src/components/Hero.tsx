@@ -43,7 +43,7 @@ export const Hero = () => {
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-accent-violet/10 rounded-full blur-[100px] -z-10" />
       
       {/* Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--glass-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--glass-border)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-20" />
 
       <motion.div 
         variants={containerVariants}
@@ -53,7 +53,7 @@ export const Hero = () => {
       >
         <motion.div 
           variants={itemVariants}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-dark text-xs font-medium text-accent-cyan mb-8 border border-accent-cyan/20"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-medium text-accent-cyan mb-8 border border-accent-cyan/20"
         >
           <Sparkles size={14} />
           <span>The Future of Digital Intelligence</span>
@@ -61,7 +61,7 @@ export const Hero = () => {
 
         <motion.h1 
           variants={itemVariants}
-          className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-[1.1]"
+          className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-[1.1] text-text-main"
         >
           Architecting <br />
           <span className="text-gradient">AI-Driven</span> Excellence
@@ -69,7 +69,7 @@ export const Hero = () => {
 
         <motion.p 
           variants={itemVariants}
-          className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           vork.global empowers visionary brands with bespoke AI solutions, 
           seamless digital ecosystems, and future-proof technological foundations.
@@ -80,18 +80,18 @@ export const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <motion.button 
-            whileHover={{ scale: 1.05, backgroundColor: "#15b4cc" }}
+            whileHover={{ scale: 1.05, backgroundColor: "var(--color-accent-cyan)" }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-8 py-4 bg-accent-cyan text-obsidian rounded-full font-bold text-lg overflow-hidden transition-all"
+            className="group relative px-8 py-4 bg-text-main text-[var(--bg-primary)] rounded-full font-bold text-lg overflow-hidden transition-all"
           >
             <span className="relative z-10 flex items-center gap-2">
               Start Your Journey <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </span>
           </motion.button>
           <motion.button 
-            whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+            whileHover={{ scale: 1.05, backgroundColor: "var(--glass-border)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 glass rounded-full font-bold text-lg transition-all"
+            className="px-8 py-4 glass rounded-full font-bold text-lg transition-all text-text-main"
           >
             View Case Studies
           </motion.button>

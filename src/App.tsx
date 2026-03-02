@@ -7,6 +7,7 @@ import { ServicesPage } from './pages/ServicesPage';
 import { AIIntegrationPage } from './pages/AIIntegrationPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { ThemeProvider } from './context/ThemeContext';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,11 +36,13 @@ const AnimatedRoutes = () => {
 
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
-        <AnimatedRoutes />
-      </Layout>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ScrollToTop />
+        <Layout>
+          <AnimatedRoutes />
+        </Layout>
+      </Router>
+    </ThemeProvider>
   );
 }

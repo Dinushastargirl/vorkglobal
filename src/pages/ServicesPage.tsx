@@ -6,7 +6,7 @@ const detailedServices = [
     title: "Performance Marketing",
     description: "Data-driven strategies designed to scale your brand through paid acquisition, SEO, and conversion optimization.",
     icon: TrendingUp,
-    color: "text-emerald-400",
+    color: "text-accent-steel",
     features: ["Paid Search & Social", "SEO & Content Marketing", "Conversion Rate Optimization (CRO)", "Marketing Analytics"]
   },
   {
@@ -20,28 +20,28 @@ const detailedServices = [
     title: "Digital Product Engineering",
     description: "Building scalable, high-performance web and mobile applications that deliver exceptional user experiences.",
     icon: Code,
-    color: "text-accent-violet",
+    color: "text-accent-slate",
     features: ["Full-stack Development", "Mobile App Development", "Cloud Architecture", "API Integration"]
   },
   {
     title: "Data & Analytics",
     description: "Transforming raw data into actionable insights through advanced tracking, visualization, and modeling.",
     icon: Database,
-    color: "text-amber-400",
+    color: "text-accent-steel",
     features: ["Data Warehousing", "Business Intelligence", "Advanced Tracking", "Customer Data Platforms"]
   },
   {
     title: "UX/UI Design",
     description: "Crafting intuitive, beautiful digital experiences that resonate with your audience and drive engagement.",
     icon: LayoutIcon,
-    color: "text-rose-400",
+    color: "text-accent-cyan",
     features: ["User Research", "Interface Design", "Prototyping", "Design Systems"]
   },
   {
     title: "Strategic Consulting",
     description: "Helping brands navigate the digital landscape and identify high-impact opportunities for growth.",
     icon: Target,
-    color: "text-indigo-400",
+    color: "text-accent-slate",
     features: ["Digital Transformation", "Market Analysis", "Growth Strategy", "Technology Audits"]
   }
 ];
@@ -58,10 +58,10 @@ export const ServicesPage = () => {
       <section className="pt-32 pb-20 bg-obsidian relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-cyan/5 rounded-full blur-[100px] -z-10" />
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-text-main">
             Our <span className="text-gradient">Services.</span>
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-text-muted text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             We offer a comprehensive suite of digital solutions designed to help 
             modern brands thrive in an AI-first world.
           </p>
@@ -83,13 +83,13 @@ export const ServicesPage = () => {
                 <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 ${service.color}`}>
                   <service.icon size={28} />
                 </div>
-                <h2 className="text-2xl font-bold mb-4 group-hover:text-accent-cyan transition-colors">{service.title}</h2>
-                <p className="text-zinc-400 leading-relaxed mb-8">
+                <h2 className="text-2xl font-bold mb-4 group-hover:text-accent-cyan transition-colors text-text-main">{service.title}</h2>
+                <p className="text-text-muted leading-relaxed mb-8">
                   {service.description}
                 </p>
                 <ul className="space-y-3">
                   {service.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center gap-2 text-sm text-zinc-300">
+                    <li key={fIndex} className="flex items-center gap-2 text-sm text-text-muted">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent-cyan/50" />
                       {feature}
                     </li>

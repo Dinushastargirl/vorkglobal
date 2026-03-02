@@ -12,10 +12,10 @@ export const AboutPage = () => {
     >
       <section className="pt-32 pb-20 bg-obsidian relative overflow-hidden">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-text-main">
             Our <span className="text-gradient">Story.</span>
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-text-muted text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             vork.global was founded on the belief that the intersection of human 
             creativity and artificial intelligence is the most powerful force for 
             digital growth.
@@ -38,13 +38,13 @@ export const AboutPage = () => {
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-accent-violet/10 blur-[100px] -z-10" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Engineering the <span className="text-zinc-500">Future.</span></h2>
-              <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-text-main">Engineering the <span className="text-zinc-500">Future.</span></h2>
+              <p className="text-text-muted text-lg mb-8 leading-relaxed">
                 Based in the heart of the digital revolution, vork.global is a collective 
                 of engineers, designers, and strategists dedicated to pushing the 
                 boundaries of what's possible.
               </p>
-              <p className="text-zinc-400 text-lg mb-12 leading-relaxed">
+              <p className="text-text-muted text-lg mb-12 leading-relaxed">
                 We partner with forward-thinking companies to build digital products 
                 and growth engines that don't just compete—they define their categories.
               </p>
@@ -63,14 +63,14 @@ export const AboutPage = () => {
                   <span className="font-bold">Global Reach</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center">
-                    <Target className="text-amber-400" size={20} />
+                  <div className="w-10 h-10 rounded-lg bg-accent-steel/10 flex items-center justify-center">
+                    <Target className="text-accent-steel" size={20} />
                   </div>
                   <span className="font-bold">Results Driven</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-400/10 flex items-center justify-center">
-                    <Award className="text-emerald-400" size={20} />
+                  <div className="w-10 h-10 rounded-lg bg-accent-slate/10 flex items-center justify-center">
+                    <Award className="text-accent-slate" size={20} />
                   </div>
                   <span className="font-bold">Award Winning</span>
                 </div>

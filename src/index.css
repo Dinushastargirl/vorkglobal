@@ -1,22 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+:root {
+  --color-accent-cyan: #8BAAB8;
+  --color-accent-violet: #4A2C24;
+  --color-accent-steel: #B8C6CC;
+  --color-accent-slate: #757C80;
+  
+  /* Light Theme Defaults */
+  --bg-primary: #FFFFFF;
+  --bg-obsidian: #F9FAFB;
+  --bg-charcoal: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #000000;
+  --bg-obsidian: #000000;
+  --bg-charcoal: #1A1A1A;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-accent-cyan: #22d3ee;
-  --color-accent-violet: #8b5cf6;
-  --color-obsidian: #050505;
-  --color-charcoal: #0a0a0a;
+  --color-accent-cyan: var(--color-accent-cyan);
+  --color-accent-violet: var(--color-accent-violet);
+  --color-accent-steel: var(--color-accent-steel);
+  --color-accent-slate: var(--color-accent-slate);
+  --color-obsidian: var(--bg-obsidian);
+  --color-charcoal: var(--bg-charcoal);
+  --color-text-main: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
 }
 
 @layer base {
   body {
-    @apply bg-obsidian text-zinc-100 font-sans antialiased selection:bg-accent-cyan/30 selection:text-accent-cyan;
+    @apply bg-[var(--bg-primary)] text-text-main font-sans antialiased selection:bg-accent-cyan/30 selection:text-accent-cyan transition-colors duration-300;
   }
 }
 
 .glass {
-  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  @apply backdrop-blur-xl bg-[var(--glass-bg)] border border-[var(--glass-border)] transition-colors duration-300;
 }
 
 .glass-dark {
@@ -24,7 +54,7 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-accent-violet;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-accent-steel;
 }
 
 @keyframes float {

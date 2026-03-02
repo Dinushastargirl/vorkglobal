@@ -46,7 +46,7 @@ export const Services = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mb-16">
           <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent-cyan mb-4">Our Expertise</h2>
-          <h3 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-text-main">
             Comprehensive solutions for the <br />
             <span className="text-zinc-500">intelligence era.</span>
           </h3>
@@ -65,8 +65,8 @@ export const Services = () => {
               <div className={`w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${service.color}`}>
                 <service.icon size={24} />
               </div>
-              <h4 className="text-xl font-bold mb-4 group-hover:text-accent-cyan transition-colors">{service.title}</h4>
-              <p className="text-zinc-400 leading-relaxed">
+              <h4 className="text-xl font-bold mb-4 group-hover:text-accent-cyan transition-colors text-text-main">{service.title}</h4>
+              <p className="text-text-muted leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

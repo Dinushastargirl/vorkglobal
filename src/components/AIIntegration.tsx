@@ -8,12 +8,12 @@ export const AIIntegration = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1">
             <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-accent-violet mb-4">AI Integration</h2>
-            <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">
+            <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-text-main">
               Seamlessly embedding <br />
               <span className="text-gradient">intelligence</span> into your core.
             </h3>
             
-            <p className="text-zinc-400 text-lg mb-10 leading-relaxed">
+            <p className="text-text-muted text-lg mb-10 leading-relaxed">
               We don't just add AI as a feature; we integrate it into your business logic, 
               creating systems that learn, adapt, and evolve with your needs.
             </p>
@@ -27,15 +27,15 @@ export const AIIntegration = () => {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="text-accent-cyan" size={20} />
-                  <span className="text-zinc-200 font-medium">{item}</span>
+                  <span className="text-text-main font-medium">{item}</span>
                 </div>
               ))}
             </div>
 
             <motion.button 
-              whileHover={{ scale: 1.05, backgroundColor: "#8b5cf6", color: "#ffffff" }}
+              whileHover={{ scale: 1.05, backgroundColor: "var(--color-accent-violet)", color: "#ffffff" }}
               whileTap={{ scale: 0.95 }}
-              className="mt-12 px-8 py-4 bg-white text-obsidian rounded-full font-bold transition-all"
+              className="mt-12 px-8 py-4 bg-text-main text-[var(--bg-primary)] rounded-full font-bold transition-all"
             >
               Explore Our Tech Stack
             </motion.button>

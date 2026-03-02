@@ -12,19 +12,19 @@ const aiCapabilities = [
     title: "Autonomous Agents",
     description: "Deploying AI agents that can perform complex tasks, from customer support to automated research.",
     icon: Zap,
-    color: "text-amber-400"
+    color: "text-accent-steel"
   },
   {
     title: "Predictive Analytics",
     description: "Leveraging machine learning to forecast trends, customer churn, and market opportunities.",
     icon: Network,
-    color: "text-accent-violet"
+    color: "text-accent-slate"
   },
   {
     title: "Intelligent Search",
     description: "Implementing semantic search and RAG (Retrieval-Augmented Generation) for your knowledge bases.",
     icon: Search,
-    color: "text-emerald-400"
+    color: "text-accent-cyan"
   }
 ];
 
@@ -44,10 +44,10 @@ export const AIIntegrationPage = () => {
             <Sparkles size={14} />
             <span>AI-First Digital Transformation</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-text-main">
             AI <span className="text-gradient">Integration.</span>
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-text-muted text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             We help enterprises bridge the gap between traditional operations and 
             AI-powered efficiency through strategic integration and custom development.
           </p>
@@ -58,15 +58,15 @@ export const AIIntegrationPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Why AI Integration <span className="text-zinc-500">Matters.</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-text-main">Why AI Integration <span className="text-zinc-500">Matters.</span></h2>
               <div className="space-y-8">
                 <div className="flex gap-6">
                   <div className="w-12 h-12 rounded-xl bg-accent-cyan/10 flex items-center justify-center shrink-0">
                     <Zap className="text-accent-cyan" size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">Operational Efficiency</h4>
-                    <p className="text-zinc-400">Automate repetitive tasks and free up your team for high-value strategic work.</p>
+                    <h4 className="text-xl font-bold mb-2 text-text-main">Operational Efficiency</h4>
+                    <p className="text-text-muted">Automate repetitive tasks and free up your team for high-value strategic work.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -74,8 +74,8 @@ export const AIIntegrationPage = () => {
                     <Shield className="text-accent-violet" size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">Data Security</h4>
-                    <p className="text-zinc-400">Deploy private AI instances that keep your sensitive data within your secure perimeter.</p>
+                    <h4 className="text-xl font-bold mb-2 text-text-main">Data Security</h4>
+                    <p className="text-text-muted">Deploy private AI instances that keep your sensitive data within your secure perimeter.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -83,8 +83,8 @@ export const AIIntegrationPage = () => {
                     <MessageSquare className="text-emerald-400" size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">Customer Experience</h4>
-                    <p className="text-zinc-400">Deliver hyper-personalized experiences that drive loyalty and conversion.</p>
+                    <h4 className="text-xl font-bold mb-2 text-text-main">Customer Experience</h4>
+                    <p className="text-text-muted">Deliver hyper-personalized experiences that drive loyalty and conversion.</p>
                   </div>
                 </div>
               </div>
@@ -142,8 +142,8 @@ export const AIIntegrationPage = () => {
                   <cap.icon size={32} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">{cap.title}</h3>
-                  <p className="text-zinc-400 leading-relaxed">
+                  <h3 className="text-2xl font-bold mb-4 text-text-main">{cap.title}</h3>
+                  <p className="text-text-muted leading-relaxed">
                     {cap.description}
                   </p>
                 </div>
